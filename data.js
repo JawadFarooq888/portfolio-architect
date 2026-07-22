@@ -1,6 +1,6 @@
 const portfolioData = {
     profile: {
-        name: "Developer Architect",
+        name: "Jawad Farooq",
         roles: ["Android Developer", "Flutter Developer", "Data Engineer", "Database Specialist"],
         tagline: "Building high-performance apps & scalable data systems."
     },
