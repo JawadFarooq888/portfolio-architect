@@ -8,27 +8,59 @@ const portfolioData = {
     projects: [
         {
             id: 1,
-            title: "SafeGuard Banking (Android)",
-            category: "Android / Kotlin / Jetpack Compose",
-            description: "High-security banking app featuring biometrics and real-time fraud detection.",
-            image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-            tags: ["KOTLIN", "COMPOSE", "MVVM"]
+            title: "Daily Planner App",
+            category: "Android / Kotlin / Room DB",
+            description: "A smart productivity tool to organize daily tasks with local database persistence and push notifications.",
+            image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800",
+            tags: ["KOTLIN", "ROOM", "MVVM"]
         },
         {
             id: 2,
-            title: "Multi-Source Data Pipeline",
-            category: "ETL / Python / Apache Airflow",
-            description: "Built a robust ETL system extracting 5M+ records daily from 12+ sources.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-            tags: ["PYTHON", "ETL", "AIRFLOW"]
+            title: "My Diary - Secure Journal",
+            category: "Android / Jetpack Compose",
+            description: "Personal encrypted diary app with biometric lock and cloud backup features.",
+            image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800",
+            tags: ["COMPOSE", "BIOMETRICS", "FIREBASE"]
         },
         {
             id: 3,
-            title: "FleetX Delivery Solution",
-            category: "Flutter / Firebase",
-            description: "Cross-platform logistics app for real-time driver tracking and route optimization.",
-            image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=800",
-            tags: ["FLUTTER", "FIREBASE", "MAPS"]
+            title: "WiFi Printing Solution",
+            category: "Android / Native SDK",
+            description: "Innovative app to discover and print documents directly to network printers via WiFi.",
+            image: "https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&q=80&w=800",
+            tags: ["NETWORK", "PRINTING", "SDK"]
+        },
+        {
+            id: 4,
+            title: "Smart Translator App",
+            category: "Android / ML Kit / API",
+            description: "Real-time voice and text translator supporting 50+ languages using Google ML Kit.",
+            image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
+            tags: ["ML KIT", "API", "KOTLIN"]
+        },
+        {
+            id: 5,
+            title: "Kashmir Travel Guidance",
+            category: "Flutter / Maps API",
+            description: "Comprehensive travel guide for Kashmir with offline maps, local spots, and hotel booking.",
+            image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80&w=800",
+            tags: ["FLUTTER", "MAPS", "UX"]
+        },
+        {
+            id: 6,
+            title: "Funny Voice Changer",
+            category: "Android / Audio Engineering",
+            description: "Real-time audio processing app to apply funny effects and filters to voice recordings.",
+            image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800",
+            tags: ["AUDIO", "EFFECTS", "KOTLIN"]
+        },
+        {
+            id: 7,
+            title: "Precision BI & Data Warehouse",
+            category: "Data Engineering / ETL",
+            description: "Architecting a high-precision Business Intelligence system using automated ETL pipelines and data warehousing for enterprise analytics.",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            tags: ["ETL", "WAREHOUSE", "BI"]
         }
     ]
 };
