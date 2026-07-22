@@ -35,14 +35,16 @@
     <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800/50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="text-2xl font-extrabold tracking-tighter text-white">
-                DEV<span class="text-cyan-400">.</span>ARCHITECT
+                JAWAD<span class="text-cyan-400">.</span>F
             </div>
+
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-10 text-sm font-semibold tracking-wide">
                 <a href="#about" class="text-slate-400 hover:text-cyan-400 transition">SERVICES</a>
                 <a href="#data" class="text-slate-400 hover:text-cyan-400 transition">DATA OPS</a>
                 <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition">PROJECTS</a>
-                <div class="flex items-center gap-4">
-                    <a href="Jawad_Farooq_Resume.pdf" download class="flex items-center gap-2 text-slate-400 hover:text-white transition group border-r border-slate-700 pr-6">
+                <div class="flex items-center gap-4 border-l border-slate-800 pl-6">
+                    <a href="Jawad_Farooq_Resume.pdf" download class="flex items-center gap-2 text-slate-400 hover:text-white transition group">
                         <i data-lucide="download" class="w-4 h-4 group-hover:animate-bounce"></i> RESUME
                     </a>
                     <a href="#contact-form" class="bg-cyan-600/10 text-cyan-400 border border-cyan-500/20 px-6 py-2.5 rounded-full hover:bg-cyan-600 hover:text-white transition duration-300">
@@ -50,31 +52,45 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <i data-lucide="menu" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-slate-900 border-b border-slate-800 p-6 space-y-4 shadow-2xl">
+            <a href="#about" class="block text-lg font-semibold text-slate-300 hover:text-cyan-400">SERVICES</a>
+            <a href="#data" class="block text-lg font-semibold text-slate-300 hover:text-cyan-400">DATA OPS</a>
+            <a href="#projects" class="block text-lg font-semibold text-slate-300 hover:text-cyan-400">PROJECTS</a>
+            <a href="Jawad_Farooq_Resume.pdf" download class="block text-lg font-semibold text-slate-300 hover:text-cyan-400">DOWNLOAD RESUME</a>
+            <a href="#contact-form" class="block w-full text-center bg-cyan-600 text-white py-4 rounded-2xl font-bold">HIRE ME</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-44 pb-32 px-6">
+    <section class="relative pt-32 pb-20 px-4 md:px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-6 md:mb-8">
                 <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                 </span>
                 <span class="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Available for Architecture Roles</span>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight text-white">
-                Engineering <span class="gradient-text">Apps</span> & <br>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tight text-white px-2">
+                Engineering <span class="gradient-text">Apps</span> & <br class="hidden sm:block">
                 Optimizing <span class="text-slate-500">Data.</span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p class="text-slate-400 text-base md:text-2xl max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed px-4">
                 Android, Flutter, and Data Engineering Specialist. I build high-performance mobile experiences powered by robust ETL pipelines and scalable databases.
             </p>
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <a href="#projects" class="w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition duration-300 shadow-2xl shadow-white/5">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 px-6">
+                <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition duration-300 shadow-2xl shadow-white/5">
                     VIEW PORTFOLIO
                 </a>
-                <a href="Jawad_Farooq_Resume.pdf" download class="w-full md:w-auto px-10 py-4 bg-slate-800 text-white font-bold rounded-2xl border border-slate-700 hover:bg-slate-700 transition duration-300 flex items-center justify-center gap-2">
+                <a href="Jawad_Farooq_Resume.pdf" download class="w-full sm:w-auto px-8 py-4 bg-slate-800 text-white font-bold rounded-2xl border border-slate-700 hover:bg-slate-700 transition duration-300 flex items-center justify-center gap-2">
                     <i data-lucide="download" class="w-5 h-5"></i> DOWNLOAD RESUME
                 </a>
             </div>
@@ -82,56 +98,56 @@
     </section>
 
     <!-- Expertise Section -->
-    <section id="about" class="py-32 px-6 bg-slate-900/50">
+    <section id="about" class="py-20 md:py-32 px-4 md:px-6 bg-slate-900/50">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6 px-4">
                 <div class="max-w-2xl">
-                    <h2 class="text-4xl font-bold mb-4 text-white">Full-Stack Technical Depth</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Full-Stack Technical Depth</h2>
                     <p class="text-slate-400">Merging the world of mobile interactivity with the precision of data engineering.</p>
                 </div>
-                <div class="text-cyan-400 font-mono text-sm tracking-widest">/ EXPERTISE</div>
+                <div class="text-cyan-400 font-mono text-sm tracking-widest uppercase">/ EXPERTISE</div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Android/Flutter -->
-                <div class="group p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
-                    <div class="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 mb-8 group-hover:bg-cyan-500 group-hover:text-white transition-all">
-                        <i data-lucide="smartphone" class="w-8 h-8"></i>
+                <div class="group p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 mb-6 md:mb-8 group-hover:bg-cyan-500 group-hover:text-white transition-all">
+                        <i data-lucide="smartphone" class="w-7 h-7 md:w-8 md:h-8"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Mobile Apps</h3>
-                    <p class="text-slate-400 leading-relaxed mb-8">Specialized in Kotlin (Native) and Flutter (Cross-platform) with focus on MVVM architecture and high UI fidelity.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-white">Mobile Apps</h3>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6 md:mb-8">Specialized in Kotlin (Native) and Flutter (Cross-platform) with focus on MVVM architecture and high UI fidelity.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">KOTLIN</span>
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">FLUTTER</span>
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">COMPOSE</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">KOTLIN</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">FLUTTER</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">COMPOSE</span>
                     </div>
                 </div>
 
                 <!-- Data Engineering -->
-                <div class="group p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
-                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-8 group-hover:bg-emerald-500 group-hover:text-white transition-all">
-                        <i data-lucide="layers" class="w-8 h-8"></i>
+                <div class="group p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-6 md:mb-8 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                        <i data-lucide="layers" class="w-7 h-7 md:w-8 md:h-8"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Data Pipelines</h3>
-                    <p class="text-slate-400 leading-relaxed mb-8">Designing automated ETL workflows using Python and Airflow to process large scale datasets with 99.9% reliability.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-white">Data Pipelines</h3>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6 md:mb-8">Designing automated ETL workflows using Python and Airflow to process large scale datasets with 99.9% reliability.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">PYTHON</span>
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">ETL</span>
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">AIRFLOW</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">PYTHON</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">ETL</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">AIRFLOW</span>
                     </div>
                 </div>
 
                 <!-- Database -->
-                <div class="group p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
-                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-8 group-hover:bg-blue-500 group-hover:text-white transition-all">
-                        <i data-lucide="database" class="w-8 h-8"></i>
+                <div class="group p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 md:mb-8 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        <i data-lucide="database" class="w-7 h-7 md:w-8 md:h-8"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">DB Architecture</h3>
-                    <p class="text-slate-400 leading-relaxed mb-8">Advanced SQL optimization and NoSQL schema design. Expert in high-concurrency database environments.</p>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4 text-white">DB Architecture</h3>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed mb-6 md:mb-8">Advanced SQL optimization and NoSQL schema design. Expert in high-concurrency database environments.</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">POSTGRES</span>
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">MONGODB</span>
-                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">REDIS</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">POSTGRES</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">MONGODB</span>
+                        <span class="text-[9px] md:text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">REDIS</span>
                     </div>
                 </div>
             </div>
@@ -400,6 +416,31 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            // Change icon based on state
+            if (isHidden) {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
 
         // Smooth scroll for anchors
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
