@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architect & Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px); }
+        .gradient-text { background: linear-gradient(90deg, #22d3ee, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover:hover { transform: translateY(-5px); border-color: rgba(34, 211, 238, 0.4); }
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-200 antialiased overflow-x-hidden">
+
+    <!-- Background Blobs -->
+    <div class="fixed top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+    <div class="fixed top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="fixed -bottom-8 left-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-extrabold tracking-tighter text-white">
+                DEV<span class="text-cyan-400">.</span>ARCHITECT
+            </div>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold tracking-wide">
+                <a href="#about" class="text-slate-400 hover:text-cyan-400 transition">SERVICES</a>
+                <a href="#data" class="text-slate-400 hover:text-cyan-400 transition">DATA OPS</a>
+                <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition">PROJECTS</a>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="flex items-center gap-2 text-slate-400 hover:text-white transition group border-r border-slate-700 pr-6">
+                        <i data-lucide="download" class="w-4 h-4 group-hover:animate-bounce"></i> RESUME
+                    </a>
+                    <a href="#contact-form" class="bg-cyan-600/10 text-cyan-400 border border-cyan-500/20 px-6 py-2.5 rounded-full hover:bg-cyan-600 hover:text-white transition duration-300">
+                        HIRE ME
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-44 pb-32 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-8">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Available for Architecture Roles</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight text-white">
+                Engineering <span class="gradient-text">Apps</span> & <br>
+                Optimizing <span class="text-slate-500">Data.</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
+                Android, Flutter, and Data Engineering Specialist. I build high-performance mobile experiences powered by robust ETL pipelines and scalable databases.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="#projects" class="w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition duration-300 shadow-2xl shadow-white/5">
+                    VIEW PORTFOLIO
+                </a>
+                <a href="#" class="w-full md:w-auto px-10 py-4 bg-slate-800 text-white font-bold rounded-2xl border border-slate-700 hover:bg-slate-700 transition duration-300 flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-5 h-5"></i> DOWNLOAD RESUME
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="about" class="py-32 px-6 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-bold mb-4 text-white">Full-Stack Technical Depth</h2>
+                    <p class="text-slate-400">Merging the world of mobile interactivity with the precision of data engineering.</p>
+                </div>
+                <div class="text-cyan-400 font-mono text-sm tracking-widest">/ EXPERTISE</div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Android/Flutter -->
+                <div class="group p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
+                    <div class="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 mb-8 group-hover:bg-cyan-500 group-hover:text-white transition-all">
+                        <i data-lucide="smartphone" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Mobile Apps</h3>
+                    <p class="text-slate-400 leading-relaxed mb-8">Specialized in Kotlin (Native) and Flutter (Cross-platform) with focus on MVVM architecture and high UI fidelity.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">KOTLIN</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">FLUTTER</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">COMPOSE</span>
+                    </div>
+                </div>
+
+                <!-- Data Engineering -->
+                <div class="group p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
+                    <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 mb-8 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                        <i data-lucide="layers" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Data Pipelines</h3>
+                    <p class="text-slate-400 leading-relaxed mb-8">Designing automated ETL workflows using Python and Airflow to process large scale datasets with 99.9% reliability.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">PYTHON</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">ETL</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">AIRFLOW</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="group p-10 rounded-[2.5rem] bg-slate-800/40 border border-slate-800 transition-all duration-500 card-hover">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-8 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                        <i data-lucide="database" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">DB Architecture</h3>
+                    <p class="text-slate-400 leading-relaxed mb-8">Advanced SQL optimization and NoSQL schema design. Expert in high-concurrency database environments.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">POSTGRES</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">MONGODB</span>
+                        <span class="text-[10px] font-bold px-3 py-1 rounded-full bg-slate-900 border border-slate-700">REDIS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Android Technical Depth -->
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+            <div class="flex-1 order-2 md:order-1">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-6 bg-slate-800/50 rounded-2xl border border-slate-700">
+                        <h4 class="text-cyan-400 font-bold mb-2">Kotlin</h4>
+                        <p class="text-xs text-slate-500">Coroutines, Flow, Ktor</p>
+                    </div>
+                    <div class="p-6 bg-slate-800/50 rounded-2xl border border-slate-700">
+                        <h4 class="text-cyan-400 font-bold mb-2">Compose</h4>
+                        <p class="text-xs text-slate-500">Modern Declarative UI</p>
+                    </div>
+                    <div class="p-6 bg-slate-800/50 rounded-2xl border border-slate-700">
+                        <h4 class="text-cyan-400 font-bold mb-2">Clean Arch</h4>
+                        <p class="text-xs text-slate-500">MVVM, MVI, Repository Pattern</p>
+                    </div>
+                    <div class="p-6 bg-slate-800/50 rounded-2xl border border-slate-700">
+                        <h4 class="text-cyan-400 font-bold mb-2">Jetpack</h4>
+                        <p class="text-xs text-slate-500">Room, Navigation, Hilt/Dagger</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 order-1 md:order-2">
+                <div class="inline-block px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-bold mb-6">MOBILE ARCHITECT</div>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">Native Android <br> Excellence.</h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    Main native apps ko build karte waqt performance aur scalability ka khas khayal rakhta hoon. Kotlin ke modern tools use karke main buttery-smooth user experiences create karta hoon jo hardware ka full potential use karte hain.
+                </p>
+                <div class="flex gap-4">
+                    <i data-lucide="android" class="w-10 h-10 text-emerald-400"></i>
+                    <i data-lucide="smartphone" class="w-10 h-10 text-blue-400"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ETL Visualizer Section -->
+    <section class="py-32 px-6 bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black text-white mb-16 text-center italic">ETL Pipeline Architecture</h2>
+
+            <div class="grid md:grid-cols-4 gap-4 items-center">
+                <!-- Step 1 -->
+                <div class="p-6 bg-slate-800 rounded-3xl border border-slate-700 text-center relative">
+                    <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="download-cloud"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Extract</h4>
+                    <p class="text-xs text-slate-500">API, Web Scrapers, SQL Logs, JSON S3 Buckets</p>
+                    <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10 text-slate-600">
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="p-6 bg-slate-800 rounded-3xl border border-slate-700 text-center relative">
+                    <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Transform</h4>
+                    <p class="text-xs text-slate-500">Data Cleansing, Normalization, Spark Jobs</p>
+                    <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10 text-slate-600">
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="p-6 bg-slate-800 rounded-3xl border border-slate-700 text-center relative">
+                    <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="upload-cloud"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Load</h4>
+                    <p class="text-xs text-slate-500">PostgreSQL, BigQuery, Data Warehouse</p>
+                    <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 z-10 text-slate-600">
+                        <i data-lucide="arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="p-6 bg-cyan-600/20 rounded-3xl border border-cyan-500/50 text-center">
+                    <div class="w-12 h-12 bg-cyan-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-cyan-500/50">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h4 class="font-bold text-white mb-2">Visualize</h4>
+                    <p class="text-xs text-slate-500">Tableau, PowerBI, App Dashboards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Performance Metrics -->
+    <section class="py-20 px-6 bg-slate-900/80">
+        <div class="max-w-5xl mx-auto p-12 bg-slate-800/30 rounded-[3rem] border border-slate-700/50">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-black text-white mb-4">Optimization Impact</h3>
+                <p class="text-slate-500">Real-world results from a recent Database Tuning project (PostgreSQL)</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-slate-400">Query Latency (Avg)</span>
+                            <span class="text-emerald-400 font-bold">-75% Improvement</span>
+                        </div>
+                        <div class="h-4 bg-slate-700 rounded-full overflow-hidden flex">
+                            <div class="h-full bg-slate-500 w-[100%] transition-all duration-1000" title="Before"></div>
+                        </div>
+                        <div class="h-4 bg-slate-700 rounded-full overflow-hidden flex mt-2">
+                            <div class="h-full bg-emerald-500 w-[25%] transition-all duration-1000" title="After"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-slate-600 mt-1 uppercase font-bold tracking-tighter">
+                            <span>Before Optimization</span>
+                            <span>After Optimization</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span class="text-slate-400">Concurrent Connections Support</span>
+                            <span class="text-cyan-400 font-bold">+300% Scaling</span>
+                        </div>
+                        <div class="h-4 bg-slate-700 rounded-full overflow-hidden flex">
+                            <div class="h-full bg-slate-500 w-[20%]"></div>
+                        </div>
+                        <div class="h-4 bg-slate-700 rounded-full overflow-hidden flex mt-2">
+                            <div class="h-full bg-cyan-500 w-[80%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-slate-900/50 rounded-3xl border border-slate-700 relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl"></div>
+                    <h4 class="text-xl font-bold text-white mb-6">Database Mastery</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i>
+                            Index Optimization & Partitioning
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                            High Availability Clusters
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="database" class="w-4 h-4 text-blue-400"></i>
+                            Normal Forms (1NF to BCNF)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Ops / ETL Showcase -->
+    <section id="data" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto px-10 py-20 bg-gradient-to-br from-slate-900 to-slate-800 rounded-[4rem] border border-slate-800 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-12 opacity-10">
+                <i data-lucide="terminal" class="w-64 h-64"></i>
+            </div>
+            <div class="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-8">The Data Engine Room</h2>
+                    <p class="text-slate-400 text-lg mb-10 leading-relaxed">
+                        I specialize in building the "backbone" of modern applications. My ETL processes ensure that data flows seamlessly from multiple sources to your analytical warehouses.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-cyan-500/20 p-2 rounded-lg text-cyan-400"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">Streamlined ETL</h4>
+                                <p class="text-sm text-slate-500">Extract, Transform, Load pipelines with custom validation logic.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-emerald-500/20 p-2 rounded-lg text-emerald-400"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white">Database Normalization</h4>
+                                <p class="text-sm text-slate-500">Optimizing storage and query performance for massive datasets.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-black/50 p-8 rounded-3xl border border-slate-700/50 font-mono text-xs">
+                    <div class="flex gap-2 mb-6">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <p class="text-cyan-400"># ETL Pipeline Execution</p>
+                    <p class="text-slate-500">Fetching data from API_ENDPOINT...</p>
+                    <p class="text-emerald-400">SUCCESS: 145,000 rows extracted.</p>
+                    <p class="text-slate-500">Applying transformation: Normalizing date formats...</p>
+                    <p class="text-slate-500">Applying transformation: Filtering null values...</p>
+                    <p class="text-cyan-400">Loading to PostgreSQL production cluster...</p>
+                    <p class="text-emerald-400 mt-4 font-bold text-sm">PROCESSED FINISHED IN 2.4s</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-5xl font-black text-white mb-4">Featured Work</h2>
+                <p class="text-slate-400">A collection of projects spanning across mobile and data ecosystems.</p>
+            </div>
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Projects will be injected here from data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-form" class="py-32 px-6 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto bg-slate-800/50 border border-slate-700/50 p-12 rounded-[3rem]">
+            <h2 class="text-4xl font-black text-white mb-8 text-center">Get in Touch</h2>
+            <form id="portfolio-contact" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Name" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-6 py-4 focus:border-cyan-500 outline-none transition" required>
+                    <input type="email" placeholder="Email" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-6 py-4 focus:border-cyan-500 outline-none transition" required>
+                </div>
+                <textarea placeholder="Your Message" rows="5" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-6 py-4 focus:border-cyan-500 outline-none transition" required></textarea>
+                <button type="submit" class="w-full py-4 bg-cyan-600 text-white font-bold rounded-xl hover:bg-cyan-500 transition duration-300 flex items-center justify-center gap-2 shadow-xl shadow-cyan-900/20">
+                    <i data-lucide="send" class="w-5 h-5"></i> SEND MESSAGE
+                </button>
+            </form>
+            <div id="form-feedback" class="mt-6 text-center text-emerald-400 hidden italic">
+                Message saved to local database (Simulation)!
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script src="data.js"></script>
+    <footer id="contact" class="py-20 border-t border-slate-800 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div>
+                <h3 class="text-3xl font-black text-white mb-2">Let's build the future.</h3>
+                <p class="text-slate-400">Open for full-time roles and high-impact consultations.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="p-4 bg-slate-800 rounded-2xl hover:bg-white hover:text-black transition duration-300">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="#" class="p-4 bg-slate-800 rounded-2xl hover:bg-cyan-500 hover:text-white transition duration-300">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="mailto:contact@example.com" class="px-8 py-4 bg-cyan-600 rounded-2xl font-bold hover:bg-cyan-500 transition duration-300">
+                    SEND AN EMAIL
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-800/50 text-center text-slate-500 text-xs tracking-widest uppercase">
+            &copy; 2024 PORTFOLIO.ARCHITECT | ALL RIGHTS RESERVED
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
