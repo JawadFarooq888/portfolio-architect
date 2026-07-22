@@ -4,7 +4,7 @@ const portfolioData = {
         roles: ["Android Developer", "Flutter Developer", "Data Engineer", "Database Specialist"],
         tagline: "Building high-performance apps & scalable data systems."
     },
-    // Aap yahan naye projects easily add kar sakte hain
+    // Easily add new projects here
     projects: [
         {
             id: 1,
@@ -65,7 +65,7 @@ const portfolioData = {
     ]
 };
 
-// Projects ko dynamically load karne ka function
+// Function to dynamically load projects
 function loadProjects() {
     const container = document.getElementById('projects-grid');
     if (!container) return;
