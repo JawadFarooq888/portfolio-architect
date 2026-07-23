@@ -70,38 +70,49 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 px-4 md:px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <!-- Profile Image Container -->
-            <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-10 group">
-                <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <img src="profile.jpeg" alt="Jawad Farooq" class="relative w-full h-full object-cover rounded-full border-2 border-slate-800 shadow-2xl">
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Text Content (Left) -->
+            <div class="flex-1 text-center md:text-left order-2 md:order-1">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                    </span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Available for Architecture Roles</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight text-white">
+                    Engineering <span class="gradient-text">Apps</span> & <br class="hidden md:block">
+                    Optimizing <span class="text-slate-500">Data.</span>
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed mx-auto md:mx-0">
+                    Android, Flutter, and Data Engineering Specialist. I build high-performance mobile experiences powered by robust ETL pipelines and scalable databases.
+                </p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="#projects" class="px-8 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition duration-300 shadow-xl shadow-white/5">
+                        VIEW PORTFOLIO
+                    </a>
+                    <a href="https://wa.me/923354427428" target="_blank" class="px-8 py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-500 transition duration-300 flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i> WHATSAPP
+                    </a>
+                </div>
             </div>
 
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-6 md:mb-8">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                </span>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-cyan-400">Available for Architecture Roles</span>
-            </div>
-            <h1 class="text-4xl sm:text-6xl md:text-8xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tight text-white px-2">
-                Engineering <span class="gradient-text">Apps</span> & <br class="hidden sm:block">
-                Optimizing <span class="text-slate-500">Data.</span>
-            </h1>
-            <p class="text-slate-400 text-base md:text-2xl max-w-3xl mx-auto mb-10 md:mb-12 leading-relaxed px-4">
-                Android, Flutter, and Data Engineering Specialist. I build high-performance mobile experiences powered by robust ETL pipelines and scalable databases.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 px-6">
-                <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-2xl hover:bg-cyan-400 transition duration-300 shadow-2xl shadow-white/5">
-                    VIEW PORTFOLIO
-                </a>
-                <a href="https://wa.me/923354427428" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-500 transition duration-300 flex items-center justify-center gap-2 shadow-xl shadow-emerald-900/20">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> WHATSAPP ME
-                </a>
-                <a href="Jawad_Farooq_Resume.pdf" download class="w-full sm:w-auto px-8 py-4 bg-slate-800 text-white font-bold rounded-2xl border border-slate-700 hover:bg-slate-700 transition duration-300 flex items-center justify-center gap-2">
-                    <i data-lucide="download" class="w-5 h-5"></i> RESUME
-                </a>
+            <!-- Profile Image (Right) -->
+            <div class="flex-1 flex justify-center order-1 md:order-2">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[400px] md:h-[500px] group">
+                    <!-- Decorative back layer -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-emerald-500 rounded-[2.5rem] rotate-3 opacity-10 group-hover:rotate-6 transition duration-500"></div>
+                    <!-- Image Card -->
+                    <div class="absolute inset-0 bg-slate-800 rounded-[2.5rem] border-2 border-slate-700 overflow-hidden shadow-2xl">
+                        <img src="profile.jpeg" alt="Jawad Farooq" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    </div>
+                    <!-- Floating Experience Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-slate-900 border border-slate-700 p-5 rounded-3xl shadow-2xl hidden lg:block">
+                        <div class="text-cyan-400 font-black text-3xl">3+</div>
+                        <div class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Years of <br> Experience</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
