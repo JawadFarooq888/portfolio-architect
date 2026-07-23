@@ -43,7 +43,7 @@ const portfolioData = {
             title: "Kashmir Travel Guidance",
             category: "Flutter / Maps API",
             description: "A beautiful travel companion app with curated local spots, interactive maps, and cultural guides for Kashmir.",
-            image: "https://images.unsplash.com/photo-1621245052981-64d4b1a134a4?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80&w=800",
             tags: ["FLUTTER", "MAPS", "UX"]
         },
         {
@@ -65,16 +65,22 @@ const portfolioData = {
     ],
     experience: [
         {
-            company: "Tech Solutions Inc.",
-            role: "Senior Android Developer",
-            period: "2022 - Present",
-            description: "Leading mobile development for core banking products."
+            company: "CareCloud",
+            role: "Data Engineer",
+            period: "June 2025 - Present",
+            description: "Architecting high-scale ETL pipelines and data warehousing solutions. Expert in SQL Server, Linked Servers, and complex data extractions."
         },
         {
-            company: "DataFlow Systems",
-            role: "Data Engineer",
-            period: "2020 - 2022",
-            description: "Designed and maintained scalable ETL pipelines."
+            company: "Global Market",
+            role: "Freelance Software Architect",
+            period: "April 2025 - Present",
+            description: "Delivering high-quality Android and Flutter solutions for international clients. Focusing on scalability and performance optimization."
+        },
+        {
+            company: "Janbark Technology",
+            role: "Android Developer",
+            period: "March 2023 - April 2025",
+            description: "Developed native Android applications using Kotlin and Jetpack Compose. Managed full app lifecycle from design to Play Store deployment."
         }
     ]
 };
