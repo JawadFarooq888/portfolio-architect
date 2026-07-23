@@ -27,7 +27,7 @@ const portfolioData = {
             title: "WiFi Printing Solution",
             category: "Android / Network SDK",
             description: "High-performance utility to discover network printers and print documents or images directly from Android devices.",
-            image: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800",
             tags: ["NETWORK", "PRINTING", "SDK"]
         },
         {
@@ -35,7 +35,7 @@ const portfolioData = {
             title: "Smart Translator App",
             category: "Android / ML Kit / API",
             description: "Advanced translator featuring real-time OCR, voice recognition, and support for over 100 languages via Google ML Kit.",
-            image: "https://images.unsplash.com/photo-1543165796-5426273dfbb3?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800",
             tags: ["ML KIT", "API", "KOTLIN"]
         },
         {
@@ -43,7 +43,7 @@ const portfolioData = {
             title: "Kashmir Travel Guidance",
             category: "Flutter / Maps API",
             description: "A beautiful travel companion app with curated local spots, interactive maps, and cultural guides for Kashmir.",
-            image: "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1598305072042-8356230058b7?auto=format&fit=crop&q=80&w=800",
             tags: ["FLUTTER", "MAPS", "UX"]
         },
         {
@@ -51,16 +51,30 @@ const portfolioData = {
             title: "Funny Voice Changer",
             category: "Android / Audio Engineering",
             description: "Real-time voice modulation app with high-fidelity audio filters and social media sharing capabilities.",
-            image: "https://images.unsplash.com/photo-1516280440614-37939bb912cd?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800",
             tags: ["AUDIO", "EFFECTS", "KOTLIN"]
         },
         {
             id: 7,
-            title: "Precision BI & Data Warehouse",
-            category: "Data Engineering / ETL",
-            description: "Architecting a high-precision Business Intelligence system using automated ETL pipelines and data warehousing for enterprise analytics.",
+            title: "Enterprise ETL & BI Architect",
+            category: "Data Engineering / SQL Server",
+            description: "Architecting complex extraction systems using SQL Server Linked Servers and OpenQueries. Processing massive CSV/flat-file datasets into structured warehouses.",
             image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-            tags: ["ETL", "WAREHOUSE", "BI"]
+            tags: ["SQL SERVER", "LINKED SERVER", "ETL"]
+        }
+    ],
+    experience: [
+        {
+            company: "Tech Solutions Inc.",
+            role: "Senior Android Developer",
+            period: "2022 - Present",
+            description: "Leading mobile development for core banking products."
+        },
+        {
+            company: "DataFlow Systems",
+            role: "Data Engineer",
+            period: "2020 - 2022",
+            description: "Designed and maintained scalable ETL pipelines."
         }
     ]
 };
@@ -74,7 +88,7 @@ function loadProjects() {
     portfolioData.projects.forEach(project => {
         const card = `
             <div class="group relative overflow-hidden rounded-[2rem] bg-slate-800 border border-slate-700 card-hover transition-all duration-500">
-                <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover opacity-60 group-hover:scale-110 group-hover:opacity-100 transition duration-700">
+                <img src="${project.image}" alt="${project.title}" loading="lazy" class="w-full h-64 object-cover opacity-60 group-hover:scale-110 group-hover:opacity-100 transition duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent p-8 flex flex-col justify-end">
                     <span class="text-cyan-400 text-[10px] font-bold tracking-widest uppercase mb-2">${project.category}</span>
                     <h3 class="text-2xl font-bold text-white mb-2">${project.title}</h3>
