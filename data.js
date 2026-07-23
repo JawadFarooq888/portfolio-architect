@@ -19,7 +19,7 @@ const portfolioData = {
             title: "My Diary - Secure Journal",
             category: "Android / Jetpack Compose",
             description: "Private encrypted diary with biometric authentication, rich text editing, and automatic cloud synchronization.",
-            image: "https://images.unsplash.com/photo-1512418490979-92798ccc1380?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800",
             tags: ["COMPOSE", "BIOMETRICS", "FIREBASE"]
         },
         {
@@ -43,7 +43,7 @@ const portfolioData = {
             title: "Kashmir Travel Guidance",
             category: "Flutter / Maps API",
             description: "A beautiful travel companion app with curated local spots, interactive maps, and cultural guides for Kashmir.",
-            image: "https://images.unsplash.com/photo-1598305072042-8356230058b7?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1621245052981-64d4b1a134a4?auto=format&fit=crop&q=80&w=800",
             tags: ["FLUTTER", "MAPS", "UX"]
         },
         {
