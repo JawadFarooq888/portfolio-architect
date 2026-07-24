@@ -116,7 +116,7 @@ function loadProjects() {
     container.innerHTML = '';
     portfolioData.projects.forEach(project => {
         const card = `
-            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-800 border border-slate-700 card-hover transition-all duration-500 min-h-[400px]">
+            <div onclick="openProject(${project.id})" class="group relative overflow-hidden rounded-[2rem] bg-slate-800 border border-slate-700 card-hover transition-all duration-500 min-h-[400px] cursor-pointer">
                 <div class="absolute inset-0 bg-slate-700 animate-pulse"></div>
                 <img src="${project.image}"
                      alt="${project.title}"
@@ -136,6 +136,50 @@ function loadProjects() {
         `;
         container.innerHTML += card;
     });
+}
+
+function openProject(id) {
+    const project = portfolioData.projects.find(p => p.id === id);
+    if (!project) return;
+
+    const modal = document.getElementById('project-modal');
+    const content = document.getElementById('modal-content');
+
+    content.innerHTML = `
+        <span class="text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4 block">${project.category}</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-6">${project.title}</h2>
+        <img src="${project.image}" class="w-full h-64 object-cover rounded-3xl mb-8 border border-slate-700 shadow-xl">
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">${project.description}</p>
+        <div class="space-y-6">
+            <h4 class="text-white font-bold text-lg border-b border-slate-800 pb-2">Technical Overview</h4>
+            <div class="flex flex-wrap gap-3">
+                ${project.tags.map(tag => `<span class="bg-slate-800 text-slate-300 px-4 py-1.5 rounded-xl text-xs font-mono font-bold border border-slate-700">${tag}</span>`).join('')}
+            </div>
+        </div>
+        <div class="mt-12 flex gap-4">
+            <a href="https://wa.me/923354427428" target="_blank" class="bg-cyan-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-cyan-500 transition">Discuss Project</a>
+        </div>
+    `;
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    lucide.createIcons();
+}
+
+function initModal() {
+    const modal = document.getElementById('project-modal');
+    const closeBtn = document.getElementById('close-modal');
+    const overlay = document.getElementById('modal-overlay');
+
+    if (!modal) return;
+
+    const closeModal = () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
 }
 
 function loadStats() {
@@ -223,5 +267,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadStats();
     loadTestimonials();
     initContactForm();
+    initModal();
     lucide.createIcons();
 });
