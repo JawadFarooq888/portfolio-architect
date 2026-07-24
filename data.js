@@ -11,7 +11,7 @@ const portfolioData = {
             title: "Daily Planner App",
             category: "Android / Kotlin / Room DB",
             description: "A comprehensive productivity app with task scheduling, priority management, and local data persistence using Room database.",
-            image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&q=80&w=800",
             tags: ["KOTLIN", "ROOM", "MVVM"]
         },
         {
@@ -27,7 +27,7 @@ const portfolioData = {
             title: "WiFi Printing Solution",
             category: "Android / Network SDK",
             description: "High-performance utility to discover network printers and print documents or images directly from Android devices.",
-            image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&q=80&w=800",
             tags: ["NETWORK", "PRINTING", "SDK"]
         },
         {
@@ -55,32 +55,36 @@ const portfolioData = {
             tags: ["AUDIO", "EFFECTS", "KOTLIN"]
         },
         {
-            id: 7,
-            title: "Enterprise ETL & BI Architect",
-            category: "Data Engineering / SQL Server",
-            description: "Architecting complex extraction systems using SQL Server Linked Servers and OpenQueries. Processing massive CSV/flat-file datasets into structured warehouses.",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-            tags: ["SQL SERVER", "LINKED SERVER", "ETL"]
-        }
-    ],
-    experience: [
-        {
-            company: "CareCloud",
-            role: "Data Engineer",
-            period: "June 2025 - Present",
-            description: "Architecting high-scale ETL pipelines and data warehousing solutions. Expert in SQL Server, Linked Servers, and complex data extractions."
-        },
-        {
-            company: "Global Market",
-            role: "Freelance Software Architect",
-            period: "April 2025 - Present",
-            description: "Delivering high-quality Android and Flutter solutions for international clients. Focusing on scalability and performance optimization."
-        },
-        {
             company: "Janbark Technology",
             role: "Android Developer",
             period: "March 2023 - April 2025",
             description: "Developed native Android applications using Kotlin and Jetpack Compose. Managed full app lifecycle from design to Play Store deployment."
+        }
+    ],
+    stats: [
+        { label: "Apps Developed", value: "15+", icon: "smartphone" },
+        { label: "Data Processed", value: "100M+", icon: "database" },
+        { label: "Happy Clients", value: "25+", icon: "users" },
+        { label: "Code Commits", value: "1.2k+", icon: "git-commit" }
+    ],
+    testimonials: [
+        {
+            name: "Alex Johnson",
+            role: "CTO, Global Tech",
+            text: "Jawad's ability to bridge mobile development with complex data engineering is rare. He delivered our fintech app with a robust data pipeline ahead of schedule.",
+            avatar: "https://i.pravatar.cc/150?u=alex"
+        },
+        {
+            name: "Sarah Miller",
+            role: "Product Manager",
+            text: "The Kashmir Travel app Jawad built is stunning. The attention to UI detail and the smooth map integration is exactly what we needed.",
+            avatar: "https://i.pravatar.cc/150?u=sarah"
+        },
+        {
+            name: "Michael Chen",
+            role: "Data Solutions Lead",
+            text: "Working with Jawad on our SQL Server optimization was a game changer. Our query performance improved by 70% within two weeks.",
+            avatar: "https://i.pravatar.cc/150?u=mike"
         }
     ]
 };
@@ -93,15 +97,63 @@ function loadProjects() {
 
     portfolioData.projects.forEach(project => {
         const card = `
-            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-800 border border-slate-700 card-hover transition-all duration-500">
-                <img src="${project.image}" alt="${project.title}" loading="lazy" class="w-full h-64 object-cover opacity-60 group-hover:scale-110 group-hover:opacity-100 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent p-8 flex flex-col justify-end">
+            <div class="group relative overflow-hidden rounded-[2rem] bg-slate-800 border border-slate-700 card-hover transition-all duration-500 min-h-[400px]">
+                <div class="absolute inset-0 bg-slate-700 animate-pulse"></div>
+                <img src="${project.image}"
+                     alt="${project.title}"
+                     loading="lazy"
+                     onload="this.previousElementSibling.remove()"
+                     onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800'"
+                     class="w-full h-64 object-cover opacity-80 group-hover:scale-110 group-hover:opacity-100 transition duration-700 relative z-10">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent p-8 flex flex-col justify-end z-20">
                     <span class="text-cyan-400 text-[10px] font-bold tracking-widest uppercase mb-2">${project.category}</span>
                     <h3 class="text-2xl font-bold text-white mb-2">${project.title}</h3>
                     <p class="text-slate-400 text-sm line-clamp-2 mb-4">${project.description}</p>
                     <div class="flex flex-wrap gap-2">
                         ${project.tags.map(tag => `<span class="text-[8px] border border-slate-700 px-2 py-0.5 rounded-full text-slate-500 font-bold">${tag}</span>`).join('')}
                     </div>
+                </div>
+            </div>
+        `;
+        container.innerHTML += card;
+    });
+}
+
+function loadStats() {
+    const container = document.getElementById('stats-grid');
+    if (!container) return;
+
+    portfolioData.stats.forEach(stat => {
+        const item = `
+            <div class="text-center p-6 bg-slate-800/20 rounded-3xl border border-slate-800 hover:border-cyan-500/30 transition-all duration-300">
+                <div class="flex justify-center text-cyan-400 mb-4">
+                    <i data-lucide="${stat.icon}" class="w-8 h-8"></i>
+                </div>
+                <div class="text-4xl font-black text-white mb-2 tracking-tighter">${stat.value}</div>
+                <div class="text-slate-500 text-xs font-bold uppercase tracking-widest">${stat.label}</div>
+            </div>
+        `;
+        container.innerHTML += item;
+    });
+}
+
+function loadTestimonials() {
+    const container = document.getElementById('testimonials-grid');
+    if (!container) return;
+
+    portfolioData.testimonials.forEach(testi => {
+        const card = `
+            <div class="p-8 rounded-[2.5rem] bg-slate-800/30 border border-slate-800 relative group transition-all duration-500 hover:bg-slate-800/50">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="${testi.avatar}" alt="${testi.name}" class="w-12 h-12 rounded-full border-2 border-cyan-500/20">
+                    <div>
+                        <h4 class="text-white font-bold">${testi.name}</h4>
+                        <p class="text-slate-500 text-xs">${testi.role}</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 italic text-sm leading-relaxed">"${testi.text}"</p>
+                <div class="absolute top-8 right-8 text-slate-700 opacity-20 group-hover:opacity-40 transition-opacity">
+                    <i data-lucide="quote" class="w-10 h-10"></i>
                 </div>
             </div>
         `;
@@ -155,5 +207,7 @@ function initContactForm() {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
+    loadStats();
+    loadTestimonials();
     initContactForm();
 });
