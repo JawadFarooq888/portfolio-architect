@@ -4,7 +4,6 @@ const portfolioData = {
         roles: ["Android Developer", "Flutter Developer", "Data Engineer", "Database Specialist"],
         tagline: "Building high-performance apps & scalable data systems."
     },
-    // Easily add new projects here
     projects: [
         {
             id: 1,
@@ -19,7 +18,7 @@ const portfolioData = {
             title: "My Diary - Secure Journal",
             category: "Android / Jetpack Compose",
             description: "Private encrypted diary with biometric authentication, rich text editing, and automatic cloud synchronization.",
-            image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1512418490979-92798ccc1380?auto=format&fit=crop&q=80&w=800",
             tags: ["COMPOSE", "BIOMETRICS", "FIREBASE"]
         },
         {
@@ -53,6 +52,28 @@ const portfolioData = {
             description: "Real-time voice modulation app with high-fidelity audio filters and social media sharing capabilities.",
             image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800",
             tags: ["AUDIO", "EFFECTS", "KOTLIN"]
+        },
+        {
+            id: 7,
+            title: "Enterprise ETL & BI Architect",
+            category: "Data Engineering / SQL Server",
+            description: "Architecting complex extraction systems using SQL Server Linked Servers and OpenQueries. Processing massive CSV/flat-file datasets into structured warehouses.",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+            tags: ["SQL SERVER", "LINKED SERVER", "ETL"]
+        }
+    ],
+    experience: [
+        {
+            company: "CareCloud",
+            role: "Data Engineer",
+            period: "June 2025 - Present",
+            description: "Architecting high-scale ETL pipelines and data warehousing solutions. Expert in SQL Server, Linked Servers, and complex data extractions."
+        },
+        {
+            company: "Global Market",
+            role: "Freelance Software Architect",
+            period: "April 2025 - Present",
+            description: "Delivering high-quality Android and Flutter solutions for international clients. Focusing on scalability and performance optimization."
         },
         {
             company: "Janbark Technology",
@@ -89,12 +110,10 @@ const portfolioData = {
     ]
 };
 
-// Function to dynamically load projects
 function loadProjects() {
     const container = document.getElementById('projects-grid');
     if (!container) return;
-    container.innerHTML = ''; // Clear existing
-
+    container.innerHTML = '';
     portfolioData.projects.forEach(project => {
         const card = `
             <div class="group relative overflow-hidden rounded-[2rem] bg-slate-800 border border-slate-700 card-hover transition-all duration-500 min-h-[400px]">
@@ -110,7 +129,7 @@ function loadProjects() {
                     <h3 class="text-2xl font-bold text-white mb-2">${project.title}</h3>
                     <p class="text-slate-400 text-sm line-clamp-2 mb-4">${project.description}</p>
                     <div class="flex flex-wrap gap-2">
-                        ${project.tags.map(tag => `<span class="text-[8px] border border-slate-700 px-2 py-0.5 rounded-full text-slate-500 font-bold">${tag}</span>`).join('')}
+                        ${project.tags.map(tag => \`<span class="text-[8px] border border-slate-700 px-2 py-0.5 rounded-full text-slate-500 font-bold">\${tag}</span>\`).join('')}
                     </div>
                 </div>
             </div>
@@ -122,7 +141,7 @@ function loadProjects() {
 function loadStats() {
     const container = document.getElementById('stats-grid');
     if (!container) return;
-
+    container.innerHTML = '';
     portfolioData.stats.forEach(stat => {
         const item = `
             <div class="text-center p-6 bg-slate-800/20 rounded-3xl border border-slate-800 hover:border-cyan-500/30 transition-all duration-300">
@@ -140,7 +159,7 @@ function loadStats() {
 function loadTestimonials() {
     const container = document.getElementById('testimonials-grid');
     if (!container) return;
-
+    container.innerHTML = '';
     portfolioData.testimonials.forEach(testi => {
         const card = `
             <div class="p-8 rounded-[2.5rem] bg-slate-800/30 border border-slate-800 relative group transition-all duration-500 hover:bg-slate-800/50">
@@ -161,31 +180,25 @@ function loadTestimonials() {
     });
 }
 
-// --- EMAIL & CONTACT FORM LOGIC ---
 (function() {
-    emailjs.init("KHVTM75-xlyXQr_M5"); // Jawad's Public Key
+    emailjs.init("KHVTM75-xlyXQr_M5");
 })();
 
 function initContactForm() {
     const form = document.getElementById('portfolio-contact');
     const feedback = document.getElementById('form-feedback');
-
     if (!form) return;
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = form.querySelector('button');
         const originalBtnText = btn.innerHTML;
         btn.innerHTML = '<i data-lucide="loader-2" class="animate-spin"></i> SENDING...';
         lucide.createIcons();
-
         const templateParams = {
             name: form.querySelector('input[type="text"]').value,
             email: form.querySelector('input[type="email"]').value,
             message: form.querySelector('textarea').value
         };
-
-        // 1. Send Email via EmailJS
         emailjs.send('service_4dokw7z', 'template_a1redj8', templateParams)
             .then(() => {
                 feedback.innerHTML = "Message Sent Successfully! ✅";
@@ -210,4 +223,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadStats();
     loadTestimonials();
     initContactForm();
+    lucide.createIcons();
 });
