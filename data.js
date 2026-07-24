@@ -129,7 +129,7 @@ function loadProjects() {
                     <h3 class="text-2xl font-bold text-white mb-2">${project.title}</h3>
                     <p class="text-slate-400 text-sm line-clamp-2 mb-4">${project.description}</p>
                     <div class="flex flex-wrap gap-2">
-                        ${project.tags.map(tag => \`<span class="text-[8px] border border-slate-700 px-2 py-0.5 rounded-full text-slate-500 font-bold">\${tag}</span>\`).join('')}
+                        ${project.tags.map(tag => `<span class="text-[8px] border border-slate-700 px-2 py-0.5 rounded-full text-slate-500 font-bold">${tag}</span>`).join('')}
                     </div>
                 </div>
             </div>
